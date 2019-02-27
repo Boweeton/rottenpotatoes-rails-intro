@@ -7,7 +7,8 @@
       %th{class:( 'hilite' if(@sort == 'title'))} 
         %a#title_header{href: "/movies?sort=title"} Movie Title
       %th Rating
-      %th Release Date
+      %th{class:( 'hilite' if(@sort == 'release_date'))}
+        %a#release_date_header{href: "/movies?sort=release_date"} Release Date
       %th More Info
   %tbody
     - @movies.each do |movie|
