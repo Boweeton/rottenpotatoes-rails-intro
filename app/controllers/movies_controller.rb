@@ -15,8 +15,8 @@ class MoviesController < ApplicationController
     
     @sort = params[:sort]
     
-    if(@sort == 'title')
-        @movies = Movie.order(:title)
+    if(@sort)
+        @movies = Movie.order(@sort.to_sym)
     end
     
   end
