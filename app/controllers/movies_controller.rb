@@ -16,10 +16,6 @@ class MoviesController < ApplicationController
     @sort = params[:sort]
     puts @sort
   end
-  
-  def sort_column
-    @movie = Movie.all
-  end
 
   def new
     # default: render 'new' template
