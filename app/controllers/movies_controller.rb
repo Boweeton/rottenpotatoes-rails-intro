@@ -14,7 +14,11 @@ class MoviesController < ApplicationController
     @movies = Movie.all
     
     @sort = params[:sort]
-    puts @sort
+    
+    if(@sort == 'title')
+        @movies = Movie.order(:title)
+    end
+    
   end
 
   def new
