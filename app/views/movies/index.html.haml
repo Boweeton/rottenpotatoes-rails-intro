@@ -4,8 +4,8 @@
 %table#movies
   %thead
     %tr
-      %th{class:('hilite' if (@sort == 'title'))} 
-        %a#title_header{:herf: "/movies?sort=title"} Movie Title
+      %th{class:( 'hilite' if(@sort == 'title'))} 
+        %a#title_header{href: "/movies?sort=title"} Movie Title
       %th Rating
       %th Release Date
       %th More Info
