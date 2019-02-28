@@ -18,7 +18,7 @@ class MoviesController < ApplicationController
     @all_ratings = Movie.rating
     
     if(@sort)
-    session[:sort] = @sort
+        session[:sort] = @sort
         @movies = Movie.order(@sort.to_sym)
     end
     
@@ -27,7 +27,7 @@ class MoviesController < ApplicationController
         @movies = Movie.where(rating: @ratings.keys)
     end
     
-    if params[:sort] != session[:sort] or params[:ratings] != session[]
+    if(params[:sort] != session[:sort] or params[:ratings] != session[:ratings])
         session[:sort] = @sort
         session[:ratings] = @ratings
         redirect_to(sort: @sort, rating: @ratings) and return
