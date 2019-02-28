@@ -14,10 +14,16 @@ class MoviesController < ApplicationController
     @movies = Movie.all
     
     @sort = params[:sort]
-    @all_ratings = Movie.rating
+    @ratings = params[:ratings]
+    @all_ratings = Movie.ratings
     
     if(@sort)
         @movies = Movie.order(@sort.to_sym)
+    end
+    
+    if(@ratings)
+        #@movies = Movie.where(rating: )
+        puts @ratings
     end
     
   end
