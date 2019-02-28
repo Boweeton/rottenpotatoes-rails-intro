@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
     
     @sort = params[:sort]
     @ratings = params[:ratings]
-    @all_ratings = Movie.ratings
+    @all_ratings = Movie.rating
     
     if(@sort)
         @movies = Movie.order(@sort.to_sym)
