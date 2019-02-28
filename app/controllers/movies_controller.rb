@@ -14,6 +14,7 @@ class MoviesController < ApplicationController
     @movies = Movie.all
     
     @sort = params[:sort]
+    @all_ratings = Movie.ratings
     
     if(@sort)
         @movies = Movie.order(@sort.to_sym)
