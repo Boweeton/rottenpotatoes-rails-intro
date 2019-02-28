@@ -22,8 +22,7 @@ class MoviesController < ApplicationController
     end
     
     if(@ratings)
-        #@movies = Movie.where(rating: )
-        puts @ratings
+        @movies = Movie.where(rating: @ratings.keys)
     end
     
   end
